@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 export default function About() {
-  const [Read,setRead]=useState(false);
-  const[Hide,setHide]=useState(false);
-  const readMore=()=>{
+  const [Read, setRead] = useState(false);
+  const [Hide, setHide] = useState(false);
+  const readMore = () => {
     setRead(true);
     setHide(false);
   }
@@ -22,24 +22,24 @@ export default function About() {
           ABOUT ROBUSTA
         </h2>
 
-      
+
         <p className="text-base md:text-lg leading-relaxed text-[#a8a8a8] max-w-2xl mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
         </p>
         {Read &&
-        <p className="text-base md:text-lg leading-relaxed text-[#a8a8a8] max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        </p>
-}
+          <p className="text-base md:text-lg leading-relaxed text-[#a8a8a8] max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          </p>
+        }
 
         <button className="text-sm font-semibold text-amber-600 hover:text-amber-500 transition" onClick={readMore}> Read More → </button>
         {Hide &&
-                <button className="text-sm font-semibold text-amber-600 hover:text-amber-500 transition" onClick={readMore}> Read More → </button>
-}
+          <button className="text-sm font-semibold text-amber-600 hover:text-amber-500 transition" onClick={readMore}> Read More → </button>
+        }
       </div>
     </div>
   );
