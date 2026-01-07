@@ -8,9 +8,8 @@ const StarRating = ({ rating = 4 }) => {
       {[...Array(5)].map((_, i) => (
         <span
           key={i}
-          className={`text-sm ${
-            i < rating ? "text-yellow-400" : "text-gray-300"
-          }`}
+          className={`text-sm ${i < rating ? "text-yellow-400" : "text-gray-300"
+            }`}
         >
           ★
         </span>
@@ -20,23 +19,22 @@ const StarRating = ({ rating = 4 }) => {
 }
 
 
-export const ProductCard = ({ id, name, price, rating, description, image,count}) => {
+export const ProductCard = ({ id, name, price, rating, description, image, count }) => {
   const [isFavorited, setIsFavorited] = useState(false)
   const { addToCart } = useCart()
 
   const handleAddToCart = () => {
-    addToCart({ id, name, price, rating, description, image,count })
+    addToCart({ id, name, price, rating, description, image, count })
   }
 
   return (
     <div className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
       <button
         onClick={() => setIsFavorited(!isFavorited)}
-        className={`absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-lg transition ${
-          isFavorited
+        className={`absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-lg transition ${isFavorited
             ? "bg-red-500 text-white"
             : "bg-white text-gray-500 hover:text-red-500 shadow"
-        }`}
+          }`}
       >
         ♥
       </button>
@@ -68,7 +66,7 @@ export const ProductCard = ({ id, name, price, rating, description, image,count}
         <button className="flex-1 bg-amber-700 text-white py-2 rounded-lg" >
           Shop Now
         </button>
-        <button 
+        <button
           onClick={handleAddToCart}
           className="flex-1 border py-2 rounded-lg hover:bg-amber-50 transition"
         >

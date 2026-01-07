@@ -20,7 +20,7 @@ const Cart = () => {
   }
 
   const handleIncreaseCount = (index) => {
-    setQuantities((prev) => ({...prev,[index]: getQuantity(index) + 1}))
+    setQuantities((prev) => ({ ...prev, [index]: getQuantity(index) + 1 }))
 
   }
 
@@ -104,7 +104,7 @@ const Cart = () => {
               </div>
             ))}
 
-            
+
             <div className="bg-white rounded-2xl p-6 shadow-md mt-8">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-xl font-semibold text-gray-700">

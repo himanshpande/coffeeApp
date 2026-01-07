@@ -9,15 +9,14 @@ const Checkout = () => {
       return total + price
     }, 0)
   }
-  const handleOrder=()=>{
+  const handleOrder = () => {
     alert("Order placed successfully! Thank you for shopping with BrewHouse ☕")
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-gray-100 py-20 px-4">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        
-        {/* LEFT – CUSTOMER DETAILS */}
+
         <div className="bg-white rounded-2xl p-8 shadow-md">
           <h2 className="text-2xl font-bold text-amber-900 mb-6">
             ☕ Customer Details
@@ -49,7 +48,7 @@ const Checkout = () => {
             />
           </div>
 
-          {/* PAYMENT */}
+
           <h3 className="text-xl font-semibold text-gray-800 mt-8 mb-4">
             💳 Payment Method
           </h3>
@@ -67,7 +66,7 @@ const Checkout = () => {
           </div>
         </div>
 
-        {/* RIGHT – ORDER SUMMARY */}
+
         <div className="bg-white rounded-2xl p-8 shadow-md">
           <h2 className="text-2xl font-bold text-amber-900 mb-6">
             🧾 Order Summary
