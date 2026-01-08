@@ -13,14 +13,14 @@ const ContactPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#8b4a2b] to-[#b88a5a] px-6">
       <div className="max-w-6xl w-full text-white">
 
-        {/* Title */}
+
         <h1 className="text-5xl font-serif text-center mb-16">
           Contact
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
-          {/* Left Section */}
+          
           <div>
             <h2 className="text-3xl font-serif mb-4">
               Get in touch
@@ -48,7 +48,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Social Icons */}
             <div className="flex gap-4 mt-8">
               <div className="w-8 h-8 rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-[#8b4a2b] transition">
                 <Facebook size={16} />
