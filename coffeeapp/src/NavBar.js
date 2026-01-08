@@ -9,6 +9,9 @@ export default function CoffeeNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navigate = useNavigate()
   const { cartItems } = useCart()
+  const handleOrderNow=()=>{
+    navigate("/products")
+  }
 
   const navLinks = [
     { name: "About", href: "/about" },
@@ -44,7 +47,7 @@ export default function CoffeeNavbar() {
             ))}
           </div>
 
-          {/* Right Actions */}
+          
           <div className="flex items-center gap-2">
             <button
               className="hidden sm:flex h-10 w-10 items-center justify-center rounded-md text-amber-900 transition-all hover:bg-amber-100 hover:text-amber-700"
@@ -65,12 +68,11 @@ export default function CoffeeNavbar() {
               )}
             </button>
             <button
-              className="hidden sm:flex px-4 py-2 rounded-md bg-amber-800 text-amber-50 text-sm font-medium transition-all hover:bg-amber-700 shadow-md"
+              className="hidden sm:flex px-4 py-2 rounded-md bg-amber-800 text-amber-50 text-sm font-medium transition-all hover:bg-amber-700 shadow-md"onClick={handleOrderNow}
             >
               Order Now
             </button>
 
-            {/* Mobile menu button */}
             <button
               className="flex md:hidden h-10 w-10 items-center justify-center rounded-md text-amber-900 transition-colors hover:bg-amber-100"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -82,7 +84,7 @@ export default function CoffeeNavbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+   
       {isMobileMenuOpen && (
         <div className="border-t border-amber-200 bg-amber-50 md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
@@ -120,7 +122,7 @@ export default function CoffeeNavbar() {
               </button>
             </div>
             <button
-              className="mt-2 w-full px-4 py-2 rounded-md bg-amber-800 text-amber-50 text-sm font-medium hover:bg-amber-700 shadow-md"
+              className="mt-2 w-full px-4 py-2 rounded-md bg-amber-800 text-amber-50 text-sm font-medium hover:bg-amber-700 shadow-md" onClick={handleOrderNow}
             >
               Order Now
             </button>
