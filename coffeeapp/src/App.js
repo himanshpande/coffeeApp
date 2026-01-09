@@ -10,7 +10,6 @@ import ContactPage from './Contact';
 import Cart from './Cart';
 import Checkout from './checkout';
 
-
 function App() {
   return (
     <BrowserRouter>

@@ -1,7 +1,5 @@
-"use client"
-
 import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, ShoppingCart, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, ShoppingCart } from "lucide-react"
 import { useCart } from "./CartContext"
 
 export default function CoffeeMainPage() {
