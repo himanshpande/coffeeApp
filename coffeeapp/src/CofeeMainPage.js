@@ -97,8 +97,8 @@ export default function CoffeeMainPage() {
                     <span className="text-2xl text-amber-200/90">per 12oz bag</span>
                   </div>
 
-                  {/* Buy Now Button */}
                   <button
+                    type="button"
                     onClick={() => addToCart(product)}
                     className="group px-5 py-2 bg-gradient-to-r from-amber-600 to-amber-500 text-white rounded-xl font-semibold text-sm transition-all hover:from-amber-500 hover:to-amber-400 hover:shadow-xl hover:shadow-amber-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2 mx-auto"
                   >
