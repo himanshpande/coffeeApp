@@ -10,7 +10,7 @@ import {
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#8b4a2b] to-[#b88a5a] px-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#b88a5a] to-[#b88a5a] px-6">
       <div className="max-w-6xl w-full text-white">
 
 
@@ -88,7 +88,7 @@ const ContactPage = () => {
               className="w-full px-4 py-2 text-sm text-gray-800 focus:outline-none resize-none"
             />
 
-            <button className="bg-white text-[#8b4a2b] px-6 py-2 text-sm font-medium hover:bg-gray-100 transition">
+            <button className="hidden sm:flex px-4 py-2 rounded-md bg-amber-800 text-amber-50 text-sm font-medium transition-all hover:bg-amber-700 shadow-md">
               Send Message
             </button>
           </div>

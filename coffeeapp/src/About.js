@@ -1,46 +1,53 @@
-import React, { useState } from 'react';
+import { useState } from "react"
 
 export default function About() {
-  const [Read, setRead] = useState(false);
-  const [Hide, setHide] = useState(false);
-  const readMore = () => {
-    setRead(true);
-    setHide(false);
-  }
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-[#f5f3f0] px-4 py-8">
-      <div className="max-w-3xl text-center">
-        {/* <div className="mb-8 flex justify-center">
-          <img
-            src=""
-            alt="Floral illustration"
-            className="w-48 h-auto"
-          />
-        </div> */}
+  const [readMore, setReadMore] = useState(false)
 
-        <h2 className="text-6xl md:text-5xl font-serif tracking-wider mb-6 text-[#4a4a4a]">
-          ABOUT ROBUSTA
+  return (
+    <section
+      className="relative min-h-screen flex items-center justify-center px-4"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1509042239860-f550ce710b93')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#2B1B12]/80" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-3xl text-center">
+
+        <h2 className="text-4xl md:text-5xl font-serif tracking-widest mb-4 text-[#F5E6D3]">
+          ABOUT BREWHOUSE
         </h2>
 
+        <div className="w-20 h-[2px] bg-amber-500 mx-auto mb-6" />
 
-        <p className="text-base md:text-lg leading-relaxed text-[#a8a8a8] max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        <p className="text-[#E6D5C3] text-base md:text-lg leading-relaxed">
+          Crafting rich, aromatic coffee experiences using carefully sourced beans
+          and time-honored brewing methods.
         </p>
-        {Read &&
-          <p className="text-base md:text-lg leading-relaxed text-[#a8a8a8] max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          </p>
-        }
 
-        <button className="text-sm font-semibold text-amber-600 hover:text-amber-500 transition" onClick={readMore}> Read More → </button>
-        {Hide &&
-          <button className="text-sm font-semibold text-amber-600 hover:text-amber-500 transition" onClick={readMore}> Read More → </button>
-        }
+        {readMore && (
+          <p className="mt-4 text-[#E6D5C3] text-base md:text-lg leading-relaxed">
+            Every cup tells a story of passion, precision, and a love for authentic
+            coffee culture that brings people together.
+          </p>
+        )}
+
+        <button
+          onClick={() => setReadMore(!readMore)}
+          className="mt-8 inline-flex items-center gap-2
+          text-sm font-semibold tracking-wide
+          text-amber-400 hover:text-amber-300 transition"
+        >
+          {readMore ? "Read Less" : "Read More"}
+          <span className="text-lg">{readMore ? "←" : "→"}</span>
+        </button>
+
       </div>
-    </div>
-  );
+    </section>
+  )
 }
