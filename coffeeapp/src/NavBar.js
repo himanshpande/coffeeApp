@@ -18,6 +18,7 @@ export default function CoffeeNavbar() {
     { name: "Coffee", href: "/coffeePage" },
     { name: "Shop", href: "/products" },
     { name: "Contact", href: "/contact" },
+    { name: "Reviews", href: "/reviews" },
   ]
 
   return (

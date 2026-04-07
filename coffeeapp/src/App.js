@@ -9,6 +9,7 @@ import CoffeePage from './Cofee';
 import ContactPage from './Contact';
 import Cart from './Cart';
 import Checkout from './checkout';
+import ReviewsPage from './ReviewsPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/contact' element={<ContactPage/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
+          <Route path='/reviews' element={<ReviewsPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
